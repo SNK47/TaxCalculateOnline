@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="TaxCalculator.css" rel="stylesheet">
+</head>
+<script src="TaxCalculator.js"></script>
+
+
+<body>
+    <form>
+        <!-- navbar starts with  -->
+        <div id="total-navbar">
+            <div class="navbar">
+                <a href="#home" title="click to go to the home page of website"> <i class="fas fa-home" id="icon1"></i>Home</a>
+
+                <div class="dropdown">
+                    <button class="dropbtn" title="go to About us">About Us 
+                         <i class="fa fa-caret-down"></i>
+                      </button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+
+                <a href="#about" title=" click u r Taxpayer's charter">Taxpayer's charter</a>
+
+                <div class="dropdown"><button class="dropbtn" title="Grievance Redressal">Grievance Redressal 
+            <i class="fa fa-caret-down"></i>
+          </button>
+                    <div class="dropdown-content">
+                        <a href="#" class="drop-box">Link 1</a>
+                        <a href="#" class="drop-box">Link 2</a>
+                        <a href="#" class="drop-box">Link 3</a>
+                    </div>
+                </div>
+
+                <div class="dropdown"><button class="dropbtn" title="go to Forms/Downloads ">Forms/Downloads
+            <i class="fa fa-caret-down"></i>
+          </button>
+                    <div class="dropdown-content">
+                        <a href="#" class="drop-box">Link 1</a>
+                        <a href="#" class="drop-box">Link 2</a>
+                        <a href="#" class="drop-box">Link 3</a>
+                        <a href="#" class="drop-box">Link 3</a>
+                        <a href="#" class="drop-box">Link 3</a>
+                        <a href="#" class="drop-box">Link 3</a>
+                    </div>
+                </div>
+
+                <a href="#about" title="Taxpayer Services">Taxpayer Services</a>
+                <a href="#about" title="publicity Campaign">publicity Campaign</a>
+                <a href="#about" title="Contact Us">Contact Us</a>
+                <a href="#about" title="Feedback">Feedback</a>
+            </div>
+        </div>
+
+        <!-- navbar ends  -->
+
+        <div class="empty">
+            <div>dsafsd</div>
+        </div>
+
+
+
+        <div class="grid-container">
+
+            <!-- Forms starts with -->
+
+            <div id="table-content">
+                <table id="totaltable">
+
+
+                    <tbody>
+                        <caption>(As amended upto Finance Act, 2021) </caption>
+                        <tr>
+                            <div>
+                                <td><label class="lable"><i class="fas fa-calculator calculator" id="icon"></i>TAX CALCULATOR</label>
+                                </td>
+                            </div>
+                            <td class="link-text">Click here to view relevant
+                                <a href="https://www.incometaxindia.gov.in/Pages/acts/income-tax-act.aspx" id="link">Act</a> &
+                                <a href="https://www.incometaxindia.gov.in/Pages/acts/income-tax-act.aspx" id="link">Rule.</a>
+                            </td>
+
+                        </tr>
+                        <div class="before-assessment">
+                            <tr>
+                                <td>Assessment Year</td>
+                                <td class="rigth-box">
+                                    <select id="year" name="year-select" onchange="sample()">
+                      <option value="select">select</option>
+                      <option value="2022-2021">2022-2021</option>
+                      <option value="2021-2020">2021-2020</option>
+                      <option value="2020-2019">2020-2019</option>
+                      <option value="2019-2018">2019-2018</option>
+                      <option value="2018-2017"> 2018-2017</option>
+                      <option value="2017-2016">2017-2016</option>
+                      <option value="2016-2015">2016-2015</option>
+                      <option value="2015-2014">2015-2014</option>
+                      <option value="2014-2013">2014-2013</option>
+                      <option value="2013-2012">2013-2012</option>
+                      <option value="2012-2011">2012-2011</option>
+                     </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>Tax Payer</td>
+                                <td class="rigth-box">
+                                    <select id="personality" name="select" onchange="sample()">
+                        <option value="Select">Select</option>
+                        <option value="individual">Individual </option>
+                        <option value="HUF">HUF </option>
+                        <option value="AOPS/BOI">AOPS/BOI</option>
+                        <option value="Domistic company">Domistic company </option>
+                        <option value="Foreign company">Foreign company </option>
+                        <option value="Firms">Firms </option>
+                        <option value="LLP">LLP </option>
+                        <option value="Co-operative society">Co-operative society </option>
+                                </select>
+                                </td>
+                            </tr>
+
+                            <td colspan="2" id="cheack-box" style="display: none;">
+                                <div id="user-click">
+                                    <div class="select-option">
+                                        <div class="box1"><input type="radio" name="box"><br>Tick if, total turnover or gross receipt of the company in the previous year 2017-18 does not exceed 400 crore rupees</div>
+                                        <div class="box2"><input type="radio" name="box"><br>Tick if, company opted and qualify under section 115BA</div>
+                                        <div class="BOX3"><input type="radio" name="box"><br>Tick if, company opted and qualify for section 115BAA</div>
+                                        <div class="box4"><input type="radio" name="box"><br>Tick if, company opted and qualify for section 115BAB</div>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <tr>
+                                <td>Whether opting for taxation under Section 115BAC?</td>
+                                <td class="rigth-box">
+                                    <select id="yesorno" onchange="sample()">
+                        <option value="Select"> Select</option>
+                        <option value="yes">YES</option>
+                        <option value="no">NO</option>
+                         </select>
+                                </td>
+
+                            </tr>
+
+
+
+                            <tr id="gender1" style="display: none;">
+                                <td>Male / Female / Senior Citizen</td>
+                                <td class="rigth-box">
+                                    <select id="gender" onchange="sample()">
+                        <option value="Select"> Select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Senior Citizen">Senior Citizen</option>
+                        <option value="Super Senior Citizen">Super Senior Citizen</option>
+                    </select>
+                                </td>
+                            </tr>
+
+                            <tr id="resident1" style="display: none;">
+                                <td>Residential Status</td>
+                                <td class="rigth-box">
+                                    <select id="status" onchange="sample()">
+                        <option value="Select"> Select</option>
+                         <option value="Resident">Resident</option>
+                         <option value="Non-Resident">Non-Resident</option>
+                         <option value="Not oridenary resident">Not oridenary resident</option>
+                     </select>
+                                </td>
+                            </tr>
+
+
+
+                            <tr>
+                                <td>Net Taxable Income</td>
+                                <td class="rigth-box"><input type="number" min="500000" style="text-align: right;" id="taxNumber" onchange="sample()"> </td>
+                            </tr>
+                            <tr class="user-clicktoshow">
+                                <td>Income Tax after relief u/s <a href="https://www.incometaxindia.gov.in/pages/tools/tax-calculator.aspx" id="link">87A</a> </td>
+                                <td class="rigth-box"><input type="text" readonly style="text-align: right; background-color: #adadad;" id="incomeTaxNumber"> </td>
+                            </tr>
+                            <tr class="user-clicktoshow">
+                                <td>Surcharge</td>
+                                <td class="rigth-box"><input type="text" style="text-align: right; background-color: #adadad" id="Surcharge"> </td>
+                            </tr>
+
+                            <tr id="year-toshow" style="display: none;" onchange="sample()">
+                                <td>Education Cess</td>
+                                <td class="rigth-box"><input type="text" readonly style="text-align: right; background-color: #adadad" id="education-cess"> </td>
+                            </tr>
+
+                            <tr class="user-clicktoshow">
+                                <td>Health and Education Cess</td>
+                                <td class="rigth-box"> <input type="text" readonly style="text-align: right; background-color: #adadad" id="HealthandEducation"></td>
+                            </tr>
+                            <tr>
+                                <td>Total Tax Liability</td>
+                                <td class="rigth-box"><input type="text" readonly style="text-align: right; background-color: #adadad" id="Total"></td>
+                            </tr>
+
+                    </tbody>
+                </table>
+                <!-- Forms ends -->
+
+                <!-- button reset -->
+                <div class="button">
+                    <td colspan="2"><button type="reset" id="resetbutton" onClick="window.location.reload()">Reset</td>
+        </div>
+        </div>
+
+        <div class="slide-container">
+            <div id="totalnavbar1">
+                <div class="nav">
+                    <a href="#" title="click to go to the home page of website" class="linkinnav"> </i>TAX INFORMATION AND SERVICES</a>
+                </div>
+            </div>
+            <div id="totalnavbar2">
+                <div class="nav">
+                    <a href="#" title="click to go to the home page of website" class="linkinnav"> </i>TAX LAWS & RULES</a>
+                </div>
+            </div>
+            <div id="totalnavbar3">
+                <div class="nav">
+                    <a href="#" title="click to go to the home page of website" class="linkinnav"> </i>INTERNATIONAL TAXATION</a>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        </form>
+</body>
+
+<div class="bottom-1">
+    <div class="footer">
+     <strong>Advisory:</strong>Information relates to the law prevailing in the year of publication/ as indicated . Viewers are advised to ascertain the correct position/prevailing law before relying upon any document.​ ​​
+    </div>
+    <div class="footer">
+     <strong>Disclaimer:</strong>The above calculator is only to enable public to have a quick and an easy access to basic tax calculation and does not purport to give correct tax calculation in all circumstances. It is advised that for filing of returns
+     the exact calculation may be made as per the provisions contained in the relevant Acts, Rules etc.
+    </div>
+</div>
+
+<div id="grid-container2">
+    <div class="grid1">
+        <input type="button" value="Disclaimer" class="button2">
+    </div>
+
+    <div class="grid2">
+        <div>
+            <li class="icon3"><i class="far fa-newspaper"></i></li>
+            <li>Report Phishing</li>
+            <li>Report Phishing</li>
+            <li>RTI</li> 
+            <li>Ombudsman</li>
+            <li>Children's Corner</li>
+            <li>Website Policies</li>
+        </div>
+        
+    </div>
+    <div class="grid3">
+        <div>
+            <li class="icon3"><i class="fas fa-comment"></i></i></li>
+            <li>Useful Links </li>
+            <li>Subscribe</li>
+            <li>e-Governance</li> 
+            <li> Terms & Conditions</li>
+            
+        </div>
+        
+    </div>
+    <div class="grid4">
+        <div> <li class="icon3"><i class="fas fa-plane-departure"></i></i></i></li>
+            <li>Useful Links </li>
+            <li>Subscribe</li>
+            <li>e-Governance</li> 
+            <li> Terms & Conditions</li></div>
+    </div>
+    <div class="grid5">
+        <div></div>
+        
+    </div>
+</div>
+<div class="bottomend">
+    <p>© This is the official website of Central Board of Direct Taxes (CBDT), Department of Revenue, Ministry of Finance, Government of India.</p>
+    
+</div>
+<div class="bottomend">
+    <p>Visitor counter :0071707122</p>
+</div>
+
+
+</html>
